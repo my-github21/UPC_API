@@ -1,4 +1,4 @@
-# Project_Management
+# UPC_API
 
 ## Overview
 
@@ -12,26 +12,59 @@ This project is a Django REST Framework-based API for managing users, clients, a
 
 ## Technical Requirements
 
-- **Framework**: Django REST Framework (if not 'pip install rest_framework')
+- **Framework**: Django REST Framework (if not installed, run `pip install rest_framework`)
 - **Database**: MySQL 
 
 ## Creating Superuser
-- python manage.py shell
-- from django.contrib.auth.models import User
-- user1 = User.objects.create_user(username='Ram', password='jayshreeram')
 
-## Urls and steps for using POST and browser
- ### POST
-- **Creating client**: after runserver , 'http://127.0.0.1:8000/api/clients/' with 'POST' request.
-- **Creating Project**: after runserver , 'http://127.0.0.1:8000/api/projects/' with 'POST' request.
- ### GET
-- **Client information**: after runserver , 'http://127.0.0.1:8000/api/clients/' with 'GET' request.
-- **Project information**: after runserver , 'http://127.0.0.1:8000/api/projects/' with 'GET' request.
-- **Client information by id **: after runserver , 'http://127.0.0.1:8000/api/clients/1/' with 'Get' request it will give information for a single client according to it's id.
-- **Project information by id **: after runserver , 'http://127.0.0.1:8000/api/clients/1/' with 'Get' request it will give information for a single project according to it's id.
-### PUT
-- **Making Changes**: after runserver , 'http://127.0.0.1:8000/api/clients/1' with 'PUT' request.
-- **Making Changes**: after runserver , 'http://127.0.0.1:8000/api/projects/1' with 'PUT' request.
-### DELETE
-- **Deleting client**: after runserver , 'http://127.0.0.1:8000/api/clients/1' with 'DELETE' request.
-- **Deleting project**: after runserver , 'http://127.0.0.1:8000/api/projects/1' with 'DELETE' request.
+To create a superuser, follow these steps:
+
+1. Run the Django shell:
+    ```bash
+    python manage.py shell
+    ```
+2. Create the superuser:
+    ```python
+    from django.contrib.auth.models import User
+    user1 = User.objects.create_user(username='Ram', password='jayshreeram')
+    ```
+
+## URLs and Steps for Using POST and Browser
+
+### POST Requests
+
+- **Creating a Client**: After running the server, use the following URL with a `POST` request:
+  - `http://127.0.0.1:8000/api/clients/`
+  
+- **Creating a Project**: After running the server, use the following URL with a `POST` request:
+  - `http://127.0.0.1:8000/api/projects/`
+
+### GET Requests
+
+- **Client Information**: After running the server, use the following URL with a `GET` request:
+  - `http://127.0.0.1:8000/api/clients/`
+
+- **Project Information**: After running the server, use the following URL with a `GET` request:
+  - `http://127.0.0.1:8000/api/projects/`
+
+- **Client Information by ID**: After running the server, use the following URL with a `GET` request to retrieve information for a specific client by its ID:
+  - `http://127.0.0.1:8000/api/clients/1/`
+
+- **Project Information by ID**: After running the server, use the following URL with a `GET` request to retrieve information for a specific project by its ID:
+  - `http://127.0.0.1:8000/api/projects/1/`
+
+### PUT Requests
+
+- **Making Changes to a Client**: After running the server, use the following URL with a `PUT` request:
+  - `http://127.0.0.1:8000/api/clients/1`
+
+- **Making Changes to a Project**: After running the server, use the following URL with a `PUT` request:
+  - `http://127.0.0.1:8000/api/projects/1`
+
+### DELETE Requests
+
+- **Deleting a Client**: After running the server, use the following URL with a `DELETE` request:
+  - `http://127.0.0.1:8000/api/clients/1`
+
+- **Deleting a Project**: After running the server, use the following URL with a `DELETE` request:
+  - `http://127.0.0.1:8000/api/projects/1`
